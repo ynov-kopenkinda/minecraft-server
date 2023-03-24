@@ -5,9 +5,9 @@ build_image:
   stage: deploy
   image: guglio/dind-compose:latest
   services:
-    - docker:19.03.4-dind
-  # before_script:
-  #   - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_ACCES_TOKEN"
+    - docker:20.10.16-dind
+  before_script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_ACCES_TOKEN"
   script:
     - docker build -t registry.gitlab.com/kopenkinda/minecraft-server-2023-ynov-gaming-team-best-guys:$CI_IMAGE_TAG .
     # - docker push registry.gitlab.com/kopenkinda/minecraft-server-2023-ynov-gaming-team-best-guys:$CI_IMAGE_TAG
