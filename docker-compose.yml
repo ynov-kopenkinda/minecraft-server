@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   minecraft-server:
-    image: minecraft-server:test
+    image: registry.gitlab.com/kopenkinda/minecraft-server-2023-ynov-gaming-team-best-guys:$CI_IMAGE_TAG
     build:
       context: .
       dockerfile: Dockerfile
