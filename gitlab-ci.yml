@@ -1,0 +1,10 @@
+stages:
+  - deploy
+
+build_image:
+  stage: deploy
+  image: docker:stable-dind
+  script:
+    - docker compose build
+  tags:
+    - mc-server
