@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  minecraft-server:
+    image: minecraft-server:test
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - minecraft-data:/minecraft
+    ports:
+      - "25565:25565"
+
+volumes:
+  minecraft-data:
