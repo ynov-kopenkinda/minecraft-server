@@ -5,8 +5,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    volumes:
-      - minecraft-data:/minecraft
     ports:
       - "25565:25565"
 
