@@ -17,7 +17,7 @@ RUN echo "eula=true" > /minecraft/eula.txt
 
 COPY plugins/* /minecraft/plugins/
 
-COPY config.yml /minecraft/plugins/AuthMe/config.yml
+COPY config.yml /default-authme-config.yml
 
 EXPOSE 25565
 
