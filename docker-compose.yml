@@ -11,6 +11,8 @@ services:
     volumes:
       - minecraft-database:/var/lib/mysql
   minecraft-server:
+    depends_on:
+      - database
     image: ghcr.io/ynov-kopenkinda/minecraft-server:main
     build:
       context: .

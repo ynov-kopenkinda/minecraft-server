@@ -11,7 +11,7 @@ COPY spigot.jar /minecraft/spigot.jar
 COPY start.sh /minecraft/start.sh
 
 RUN chmod +x /minecraft/start.sh
-RUN /bin/sh /minecraft/start.sh
+RUN /bin/sh /minecraft/start.sh 1
 
 RUN echo "eula=true" > /minecraft/eula.txt
 
