@@ -1,5 +1,15 @@
 version: "3.7"
 services:
+  database:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: minecraft
+      MYSQL_USER: minecraft
+      MYSQL_PASSWORD: minecraft
+    volumes:
+      - minecraft-database:/var/lib/mysql
   minecraft-server:
     image: registry.gitlab.com/kopenkinda/minecraft-server-2023-ynov-gaming-team-best-guys:$CI_IMAGE_TAG
     build:
@@ -7,6 +17,15 @@ services:
       dockerfile: Dockerfile
     ports:
       - "25565:25565"
+    restart: always
+    environment:
+      EULA: "TRUE"
+      DB_HOST: database
+      DB_PORT: 3306
+      DB_NAME: minecraft
+      DB_USER: minecraft
+      DB_PASS: minecraft
 
 volumes:
   minecraft-data:
+  minecraft-database:
