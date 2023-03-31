@@ -18,7 +18,6 @@ RUN echo "eula=true" > /minecraft/eula.txt
 COPY plugins/* /minecraft/plugins/
 
 COPY config.yml /minecraft/plugins/AuthMe/config.yml
-RUN sed -i `3s/127.0.0.1/${HOST}` /minecraft/plugins/AuthMe/config.yml
 
 EXPOSE 25565
 
