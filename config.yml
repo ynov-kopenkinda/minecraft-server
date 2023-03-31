@@ -1,7 +1,7 @@
 DataSource:
     # What type of database do you want to use?
     # Valid values: SQLITE, MARIADB, MYSQL, POSTGRESQL
-    backend: MARIADB
+    backend: MYSQL
     # Enable the database caching system, should be disabled on bungeecord environments
     # or when a website integration is being used.
     caching: true
@@ -104,7 +104,7 @@ settings:
         # The next time the player joins the server, if his IP
         # is the same as last time and the timeout hasn't
         # expired, he will not need to authenticate.
-        enabled: false
+        enabled: true
         # After how many minutes should a session expire?
         # A player's session ends after the timeout or if his IP has changed
         timeout: 10
@@ -121,7 +121,7 @@ settings:
     # typical communication with the database to happen synchronously, set this to false
     useAsyncTasks: true
     # The name of the server, used in some placeholders.
-    serverName: Your Minecraft Server
+    serverName: MCPOG
     restrictions:
         # Can not authenticated players chat?
         # Keep in mind that this feature also blocks all commands not
