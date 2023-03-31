@@ -14,9 +14,9 @@ services:
     depends_on:
       - database
     image: ghcr.io/ynov-kopenkinda/minecraft-server:main
-    build:
-      context: .
-      dockerfile: Dockerfile
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
     ports:
       - "25565:25565"
     restart: always
